@@ -1,0 +1,39 @@
+name: standard-databases
+services:
+  authservice:
+    image: postgres
+    environment:
+      POSTGRES_DB: authservice
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5429:5432"
+    volumes:
+      - authservice_postgres_data:/var/lib/postgresql/data
+
+  orderservice:
+    image: postgres
+    environment:
+      POSTGRES_DB: orderservice
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5427:5432"
+    volumes:
+      - orderservice_postgres_data:/var/lib/postgresql/data
+
+  productservice:
+    image: postgres
+    environment:
+      POSTGRES_DB: productservice
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5428:5432"
+    volumes:
+      - productservice_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  authservice_postgres_data:
+  productservice_postgres_data:
+  orderservice_postgres_data:
