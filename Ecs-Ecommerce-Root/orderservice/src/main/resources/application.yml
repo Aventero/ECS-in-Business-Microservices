@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: orderservice
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orderservice
+    username: admin
+    password: admin
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  flyway:
+    url: jdbc:postgresql://localhost:5432/orderservice
+    user: admin
+    password: admin
+    schemas: public
+    create-schemas: true
+    enabled: true
+    baseline-on-migrate: true
+    baseline-version: 0
+    validate-on-migrate: false
+    locations: classpath:db/migration
+    clean-disabled: true
+
+security:
+  jwt:
+    secret-key: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
+
+server:
+  port: 8082
+
+product:
+  service:
+    url: http://localhost:8083

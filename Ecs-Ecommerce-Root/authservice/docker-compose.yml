@@ -1,0 +1,16 @@
+name: authservice-ecs
+services:
+  postgres:
+    image: postgres
+    container_name: postgres-ecs
+    environment:
+      POSTGRES_DB: authservice
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5430:5432"
+    volumes:
+      - authservice_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  authservice_postgres_data:

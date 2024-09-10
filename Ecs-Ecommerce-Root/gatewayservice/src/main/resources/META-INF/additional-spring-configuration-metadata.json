@@ -1,0 +1,19 @@
+{
+    "properties": [
+        {
+            "name": "security.jwt.secret-key",
+            "type": "java.lang.String",
+            "description": "Secret key used for JWT token signing."
+        },
+        {
+            "name": "security.jwt.expiration-time",
+            "type": "java.lang.Integer",
+            "description": "Expiration time of JWT token in seconds."
+        },
+        {
+            "name": "logging.detailed",
+            "type": "java.lang.Boolean",
+            "description": "Enable detailed logging."
+        }
+    ]
+}
