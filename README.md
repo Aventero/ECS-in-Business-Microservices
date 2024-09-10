@@ -6,6 +6,7 @@ This contains two root projects that implemented an e-commerce application.
 These implement different types of architectures:
 - Entity Component System (ECS) architecture
 - Traditional layered architecture
+
 Each root project contains the modules of each service.
 
 ## Requirements
