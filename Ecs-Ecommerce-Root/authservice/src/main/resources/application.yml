@@ -22,7 +22,8 @@ spring:
     schemas: public
     create-schemas: true
     enabled: true
-    baseline-on-migrate: true
+    baseline-version: 0
+    validate-on-migrate: false
     locations: classpath:db/migration
     clean-disabled: true
 

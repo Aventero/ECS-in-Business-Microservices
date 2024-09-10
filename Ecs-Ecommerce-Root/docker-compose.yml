@@ -1,0 +1,45 @@
+name: ecs-databases
+
+services:
+  authservice:
+    image: postgres
+    container_name: authservice-ecs
+    environment:
+      POSTGRES_DB: authservice
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5430:5432"
+    volumes:
+      - authservice_postgres_data:/var/lib/postgresql/data
+
+  productservice:
+    image: postgres
+    container_name: productservice-ecs
+    environment:
+      POSTGRES_DB: productservice
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5431:5432"
+    volumes:
+      - productservice_postgres_data:/var/lib/postgresql/data
+
+  orderservice:
+    image: postgres
+    container_name: orderservice-ecs
+    environment:
+      POSTGRES_DB: orderservice
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - orderservice_postgres_data:/var/lib/postgresql/data
+
+
+
+volumes:
+  authservice_postgres_data:
+  orderservice_postgres_data:
+  productservice_postgres_data:
