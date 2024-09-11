@@ -1,6 +1,7 @@
 # ECS-in-Business-Microservices
 Evaluation of the Entity Component System Architecture in Microservice-Based Business Applications
 
+By Henrik Weidner
 ## What is it?
 Code for a thesis, containing two root projects that implemented an e-commerce application using Spring Boot.
 These implement different types of architectures:
