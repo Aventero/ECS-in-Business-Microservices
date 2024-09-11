@@ -2,7 +2,7 @@
 Evaluation of the Entity Component System Architecture in Microservice-Based Business Applications
 
 ## What is it?
-This contains two root projects that implemented an e-commerce application.
+Code for a thesis that contains two root projects that implemented an e-commerce application.
 These implement different types of architectures:
 - Entity Component System (ECS) architecture
 - Traditional layered architecture
